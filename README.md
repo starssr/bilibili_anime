@@ -1,7 +1,5 @@
 ## 适用于WP博客的追番页面
 
-[TOC]
-
 💖项目源地址-[https://github.com/TaylorLottner/bilibili](https://github.com/TaylorLottner/bilibili ) （已授权）
 
 👌项目修改者-[IceCliffs](https://www.icecliffs.cn)（本阁下(oﾟvﾟ)ノ）
@@ -46,7 +44,7 @@ $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 
 > **Kratos-pjax版**
 
-kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/
+kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/ 按照上图方法做一遍即可(￣▽￣)
 
 #### 数据来源
 
