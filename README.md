@@ -83,7 +83,7 @@ kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/ 按照上图方法做
 
 > 原版
 
-![six](Images\six.png)
+![six](./Images/six.png)
 
 #### 数据来源
 
