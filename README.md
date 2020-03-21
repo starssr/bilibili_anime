@@ -44,7 +44,7 @@ $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 
 <img src="G:\GitHub_Project\bilibili_anime\Images\four.png" alt="four" style="zoom:80%;" />
 
-
+**（Cookie诚可贵，请保管好自己的 bilibili Cookie 防止被他人恶意调用）**
 
 > **Kratos-pjax版**
 
