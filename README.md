@@ -71,6 +71,20 @@ array_push($this->image_url, str_replace('http', 'https', $data['cover']));
 
 kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/ 按照上图方法做一遍即可(￣▽￣)
 
+#### 效果演示
+
+> Kratos-pjax版（支持页面修改）
+
+![eight](G:\GitHub_Project\bilibili_anime\Images\eight.png)
+
+> 普通版
+
+![seven](G:\GitHub_Project\bilibili_anime\Images\seven.png)
+
+> 原版
+
+![six](G:\GitHub_Project\bilibili_anime\Images\six.png)
+
 #### 数据来源
 
 bilibili 对应的 API 接口，自己看代码去(*￣3￣)╭
@@ -86,3 +100,4 @@ bilibili 对应的 API 接口，自己看代码去(*￣3￣)╭
 #### 积极反馈
 
 欢迎各位小伙伴们提出 issue 能解决的尽力解决，解决不了的自行解决(￣▽￣)
+
