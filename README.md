@@ -8,7 +8,15 @@
 
 #### 使用方法
 
+写了俩个不同的版本，大家可以提出 issue 我会根据主题写对应的版本，当然你也可以自写(￣▽￣)
 
+**默认：**
+
+放置 wp-content/theme/你的主题/你的主题页面模板下
+
+**Kratos-pjax版**
+
+kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/
 
 #### 数据来源
 

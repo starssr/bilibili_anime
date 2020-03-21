@@ -14,7 +14,7 @@ get_header(); ?>
 <!-- <base href='https://www.bilibili.com'> -->
 <div id="container" class="container">
 	<div class="row">
-        <section id="main" class='<?php echo (kratos_option('page_side_bar')=='center')?'col-md-12':'col-md-8'; ?>'>
+        <section id="main">
         <div class="page-header">
             <article>
                 <div class="cliffs-hentry cliffs-post-inner">
@@ -41,16 +41,7 @@ get_header(); ?>
             </article>
         </div>
         </section>
-        <?php if(kratos_option('page_side_bar')=='right_side'){ ?>
-        <aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
-            <div id="sidebar" class="affix-top">
-                <?php dynamic_sidebar('sidebar_tool'); ?>
-            </div>
-        </aside>
-        <?php } ?>
         </div>
-        <?php
-        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')&&(kratos_option('site_girl')&&!wp_is_mobile())) echo 'edit-box3 '; elseif(kratos_option('cd_weixin')||(kratos_option('site_girl')&&!wp_is_mobile())) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php } ?>
 	</div>
 </div>
 <?php get_footer(); ?>
