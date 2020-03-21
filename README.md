@@ -8,7 +8,7 @@
 
 ***仅适用于 Wordpress 博客系统***
 
-<img src=".\Images\one.png" alt="one" style="zoom:33%;" />
+<img src="./Images/one.png" alt="one" style="zoom:33%;" />
 
 > （效果图 : Kratos-pjax 带有页面编辑功能）
 
@@ -56,9 +56,9 @@ $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 ```html
 <meta name="referrer" content="never">
 ```
-然后打开 bili_app.php 加入：
+然后打开 bili_app.php 查找修改：
 ```php
-array_push($this->image_url, str_replace('http', 'https', $data['cover'])); 
+array_push($this->image_url, str_replace('https://','//', $data['cover']));
 ```
 
 图片显示不了的话在Header.php文件夹下加入：
