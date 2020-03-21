@@ -1,4 +1,6 @@
 <?php
+class bilibiliAnime
+{
     public $title=array();//标题
     public $image_url=array();//图片链接
     public $total=array();//总集数
