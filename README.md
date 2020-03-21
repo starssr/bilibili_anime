@@ -8,7 +8,7 @@
 
 ***仅适用于 Wordpress 博客系统***
 
-<img src=".\Images\one.png" alt="one" style="zoom:33%;" />
+<img src="./Images/one.png" alt="one" style="zoom:33%;" />
 
 > （效果图 : Kratos-pjax 带有页面编辑功能）
 
