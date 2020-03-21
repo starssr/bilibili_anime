@@ -52,7 +52,7 @@ kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/
 
 bilibili 对应的 API 接口，自己看代码去(*￣3￣)╭
 
-#### 开发日志
+#### 修改日志
 
 2020 年 3 月 21 - 上传(￣▽￣)
 
