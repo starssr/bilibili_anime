@@ -56,9 +56,9 @@ $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 ```html
 <meta name="referrer" content="never">
 ```
-然后打开 bili_app.php 加入：
+然后打开 bili_app.php 查找修改：
 ```php
-array_push($this->image_url, str_replace('http', 'https', $data['cover'])); 
+array_push($this->image_url, str_replace('https://','//', $data['cover']));
 ```
 
 图片显示不了的话在Header.php文件夹下加入：
