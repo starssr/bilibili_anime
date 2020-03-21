@@ -6,6 +6,8 @@
 
 演示地址(￣▽￣)： [https://www.icecliffs.cn/bili-anime.html]( https://www.icecliffs.cn/bili-anime.html ) 
 
+***仅适用于 Wordpress 博客系统***
+
 <img src="G:\GitHub_Project\bilibili_anime\Images\one.png" alt="one" style="zoom:33%;" />
 
 > （效果图 : Kratos-pjax 带有页面编辑功能）
@@ -45,6 +47,25 @@ $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 <img src="G:\GitHub_Project\bilibili_anime\Images\four.png" alt="four" style="zoom:80%;" />
 
 **（Cookie诚可贵，请保管好自己的 bilibili Cookie 防止被他人恶意调用）**
+
+**回源问题**
+
+设置完之后还有一个步骤，BILIBILI 番剧返回的链接是 https，而封面返回的是 http 这会导致我们的站点小绿锁消失，而且B站还有防盗链这么一个蛋疼的选项
+
+解决方法，在page-bilibili.php get_header();> 后面加入：
+```html
+<meta name="referrer" content="never">
+```
+然后打开 bili_app.php 加入：
+```php
+array_push($this->image_url, str_replace('http', 'https', $data['cover'])); 
+```
+
+图片显示不了的话在Header.php文件夹下加入：
+```html
+<meta name="referrer" content="same-origin">
+```
+然后刷新页面即可(￣▽￣)
 
 > **Kratos-pjax版**
 
