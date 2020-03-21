@@ -17,7 +17,13 @@ class bilibiliApiRequest
 	// @evaluate Protocal.
 	// @season_id SSNUM.
 	// @sum Sum.
-    public $title,$image_url,$total,$progress,$evaluate,$season_id,$sum=array();
+    public $title=array();
+    public $image_url=array();
+    public $total=array();
+    public $progress=array();
+    public $evaluate=array();
+    public $season_id=array();
+    public $sum;
     private function process($content)
     {
         $start=stripos($content,"第");
@@ -81,16 +87,13 @@ class bilibiliApiRequest
                 'Mozilla/5.0 (X11; U; Linux x86_64; zh-CN; rv:1.9.2.10) Gecko/20100922 Ubuntu/10.10 (maverick) Firefox/3.6.10',
                 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0'
             );
-        $agent = $arr[array_rand($arr)];
+        $agent = 'User-Agent: '.$arr[array_rand($arr)];
         $url = "https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=1&ps=15&vmid=$uid";
         $referer = "Referer: https://www.bilibili.com";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array($agent,$referer));
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($ch, CURLOPT_REDIR_PROTOCOLS, -1);
         $info=json_decode(curl_exec($ch),true);
         curl_close($ch);
         return $info['data']['total'];
@@ -100,25 +103,23 @@ class bilibiliApiRequest
         $this->sum=$this->getpage($uid);
         for($i=1;$i<=ceil($this->sum/15);$i++)
         {
+        	$cookie = 'Cookie: '.$cookie;
             $url = "https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=$i&ps=15&vmid=$uid";
-            $cookie = "";
+            $referer = "Referer: https://www.bilibili.com";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array($agent,$referer,$cookie));
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-            curl_setopt($ch, CURLOPT_REDIR_PROTOCOLS, -1);
             $info=json_decode(curl_exec($ch),true);
-            curl_close($ch);
             foreach ($info['data']['list'] as $data) {
                 array_push($this->title, $data['title']);
-                array_push($this->image_url, $data['cover']);
+				array_push($this->image_url, str_replace('http', 'https', $data['cover']));
                 array_push($this->total, $data['new_ep']['title']);
                 array_push($this->progress,$this->process($data['progress']));
                 array_push($this->evaluate, $data['evaluate']);
                 array_push($this->season_id, $data['season_id']);
             }
+            curl_close($ch);
         }
     }
 
