@@ -8,7 +8,7 @@
 
 ***仅适用于 Wordpress 博客系统***
 
-<img src="G:\GitHub_Project\bilibili_anime\Images\one.png" alt="one" style="zoom:33%;" />
+<img src=".\Images\one.png" alt="one" style="zoom:33%;" />
 
 > （效果图 : Kratos-pjax 带有页面编辑功能）
 
@@ -32,19 +32,19 @@
 $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 ```
 
-![two](G:\GitHub_Project\bilibili_anime\Images\two.png)
+![two](Images\two.png)
 
 **UID获取方法**
 
 打开 [https://space.bilibili.com](https://space.bilibili.com)，后面跟着的就是你的 UID
 
-![three](G:\GitHub_Project\bilibili_anime\Images\three.png)
+![three](Images\three.png)
 
 **COOKIE获取方法**
 
 *F12* **或** *右键审查元素*  点开 **dynamic** 往下拉找到请求，从 **_uuid** 开始复制到完，黏贴到上上图的 **SPACE COOKIE** 即可
 
-<img src="G:\GitHub_Project\bilibili_anime\Images\four.png" alt="four" style="zoom:80%;" />
+<img src="Images\four.png" alt="four" style="zoom:80%;" />
 
 **（Cookie诚可贵，请保管好自己的 bilibili Cookie 防止被他人恶意调用）**
 
@@ -75,15 +75,15 @@ kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/ 按照上图方法做
 
 > Kratos-pjax版（支持页面修改）
 
-![eight](G:\GitHub_Project\bilibili_anime\Images\eight.png)
+![eight](Images\eight.png)
 
 > 普通版
 
-![seven](G:\GitHub_Project\bilibili_anime\Images\seven.png)
+![seven](Images\seven.png)
 
 > 原版
 
-![six](G:\GitHub_Project\bilibili_anime\Images\six.png)
+![six](Images\six.png)
 
 #### 数据来源
 
@@ -100,4 +100,3 @@ bilibili 对应的 API 接口，自己看代码去(*￣3￣)╭
 #### 积极反馈
 
 欢迎各位小伙伴们提出 issue 能解决的尽力解决，解决不了的自行解决(￣▽￣)
-
