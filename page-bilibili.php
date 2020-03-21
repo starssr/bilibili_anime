@@ -61,7 +61,7 @@ $OvO = $arr[array_rand($arr)];
                 <h1 style="text-align:center;">订阅番剧</h1>
                  <?php
                     require_once ("bili_app.php");
-                    $bili=new bilibiliApiRequest("28645589","_uuid=DE9F5DCB-B4E2-DB29-4669-96F73C0DF8A312797infoc; buvid3=399D2A9F-CA53-4D94-999D-30C1CFB21535155809infoc; sid=i63egglh; DedeUserID=28645589; DedeUserID__ckMd5=ce1225f5173934cb; SESSDATA=6984fe1b%2C1599698139%2Ced9cb*31; bili_jct=cd48526857122a57119db70393eafdc6; LIVE_BUVID=AUTO8215841466182023; CURRENT_FNVAL=16; rpdid=|(umYR~~mR|)0J'ul)RuRYYRu; dy_spec_agreed=1; CURRENT_QUALITY=64; Hm_lvt_8a6e55dbd2870f0f5bc9194cddf32a02=1584756944,1584758570,1584762526,1584762545; INTVER=1; bp_t_offset_28645589=369077637942538252; PVID=4");
+                    $bili=new bilibiliApiRequest("UID","SPACE COOKIE");
                     echo "<small>呐呐呐(/▽＼)！当前已追 ".$bili->sum." 部，继续 Keep 哦~</small></h1></div><div class=\"bilibili\">";
                     function precentage($str1,$str2)
                     {
