@@ -42,6 +42,8 @@ $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 
 <img src="G:\GitHub_Project\bilibili_anime\Images\four.png" alt="four" style="zoom:80%;" />
 
+
+
 > **Kratos-pjax版**
 
 kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/ 按照上图方法做一遍即可(￣▽￣)
