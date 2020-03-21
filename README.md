@@ -58,7 +58,8 @@ $bili=new bilibiliApiRequest("你的UID","你的bilibili Cookie");
 ```
 然后打开 bili_app.php 查找修改：
 ```php
-array_push($this->image_url, str_replace('https://','//', $data['cover']));
+array_push($this->image_url, str_replace('https://','//', $data['cover'])); //https
+array_push($this->image_url, str_replace('http://','//', $data['cover'])); //http
 ```
 
 图片显示不了的话在Header.php文件夹下加入：
