@@ -70,6 +70,7 @@ array_push($this->image_url, str_replace('http://','//', $data['cover'])); //htt
 > **Kratos-pjax版**
 
 kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/ 按照上图方法做一遍即可(￣▽￣)
+如果开启了AJAX需要把样式加入到Head头里边
 
 #### 效果演示
 
