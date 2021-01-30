@@ -74,17 +74,10 @@ kratos-Version: 放置 wp-content/theme/kratos-pjax/pages/ 按照上图方法做
 
 #### 效果演示
 
-> Kratos-pjax版（支持页面修改）
+> Kratos-pjax版
 
 ![eight](https://github.com/icecliffs/bilibili_anime/blob/master/Images/eight.png)
 
-> 普通版
-
-![seven](https://github.com/icecliffs/bilibili_anime/blob/master/Images/seven.png)
-
-> 原版
-
-![six](https://github.com/icecliffs/bilibili_anime/blob/master/Images/six.png)
 
 #### 数据来源
 
